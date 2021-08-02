@@ -1,0 +1,32 @@
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: #0D0C1D;
+    padding: 0.5rem;
+    box-shadow: 2px 2px 4px #176275;
+}
+
+#heading {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+    color: #E3790A;
+}
+#navigation-list {
+    list-style-type: none;
+}
+.nav-item {
+    float: left;
+    margin: 2rem;
+}
+.nav-item a {
+    color: #E3790A;
+    border: none;
+    border-radius: 0.3rem;
+}
+.nav-item a:hover {
+    color: white;
+    z-index: 3;
+    text-shadow: 3px 3px 3px #c7c1c1;
+}

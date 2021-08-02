@@ -1,21 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./resources/icons/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/bootstrap.css">
     <link rel="stylesheet" href="./css/style.css">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+
     <script src="./js/jquery-3.6.0.js" crossorigin="anonymous" defer></script>
     <script src="./js/script.js" defer></script>
-
+    <link rel="shortcut icon" href="./resources/icons/codechef.svg" type="image/x-icon">
     <title>Pimo Pizza</title>
 </head>
-<body>
-    <div class="container">
-        <header>
 
+<body>
+    <div class="container-fluid">
+        <header>
+            <nav class="navbar navbar-default">
+                <div>
+                    <h3 id="heading" class="navbar-brand">Pimo Pizza</h3>
+                </div>
+                <ul id="navigation-list">
+                    <li class="nav-item active"> <a href="#" class="nav-link">HOME</a></li>
+                    <li class="nav-item active"> <a href="#" class="nav-link">MENU</a></li>
+                    <li class="nav-item active"> <a href="#" class="nav-link">RESERVATION</a></li>
+                    <li class="nav-item active"> <a href="tel:{+254712345678}" class="nav-link">
+                            <i class="fa fa-phone-square" aria-hidden="true">
+                            </i></a></li>
+                    <li class="nav-item active">
+                        <a href="#" class="nav-link"> <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                </ul>
+                <button class="btn btn-danger">ORDER</button>
+            </nav>
         </header>
 
         <main>
@@ -23,8 +47,9 @@
         </main>
 
         <footer>
-            
+
         </footer>
     </div>
 </body>
+
 </html>
