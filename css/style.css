@@ -10,6 +10,9 @@ html {
 body {
     text-align: center;
 }
+.container {
+    font-family: 'Signika', sans-serif;
+}
 
 header {
     background-color: var(--dark-background);
@@ -79,4 +82,32 @@ header {
 }
 .option:hover {
     cursor: pointer;
+}
+
+/**Specialty*/
+.specialty {
+    padding: 2rem;
+    background-color: #DBF9F0;
+    border: none;
+}
+.spec-image {
+    border-radius: 100%;
+}
+.spec-image:hover {
+    opacity: 0.6;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/*Toppings Menu*/
+.topping-menu {
+    background-color: #DBF9F0;
+}
+.toppings img {
+    height: 10rem;
+    width: 10rem;
+    border-radius: 100%;
+}
+.toppings a {
+    color: aliceblue;
 }
