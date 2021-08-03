@@ -30,14 +30,14 @@
                     <h3 id="heading" class="navbar-brand">Pimo Pizza</h3>
                 </div>
                 <ul id="navigation-list">
-                    <li class="nav-item active"> <a href="#" class="nav-link">HOME</a></li>
-                    <li class="nav-item active"> <a href="#" class="nav-link">MENU</a></li>
+                    <li class="nav-item active"> <a href="#home" class="nav-link">HOME</a></li>
+                    <li class="nav-item active"> <a href="#specialty" class="nav-link">MENU</a></li>
                     <li class="nav-item active"> <a href="#" class="nav-link">RESERVATION</a></li>
                     <li class="nav-item active"> <a href="tel:{+254712345678}" class="nav-link">
                             <i class="fa fa-phone-square" aria-hidden="true">
                             </i></a></li>
                     <li class="nav-item active">
-                        <a href="#" class="nav-link"> <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                        <a href="#book" class="nav-link"> <i class="fa fa-shopping-basket" aria-hidden="true"></i>
                         </a>
                     </li>
                 </ul>
@@ -73,7 +73,7 @@
                 </div>
             </div>
 
-            <div class="row specialty">
+            <div class="row specialty" id="specialty">
                 <h2>OUR SPECIALTY</h2>
                 <div class="col-md-4">
                     <img class="spec-image" src="./resources/images/speciality-1.jpg" alt="Mexican Wave">
@@ -138,6 +138,15 @@
             <div class="reservation">
                 <div class="book" id="book">
                     <form class="order">
+                        <div style="padding: 1.5rem;">
+                            <label for="name" class="form-label">Please enter your name: 
+                                <input type="text" class=" form-control name" name="name" id="name" placeholder="Name">
+                            </label>
+                            <br> <br>
+                            <label for="location" class="form-label">Please give us your location:
+                                <input type="text" class=" form-control location" name="location" id="location" placeholder="location">
+                            </label>
+                        </div>
                         <div>
                             <label for="pizza-size">Choose a pizza size:</label>
                             <select class="form-control form-control-sm" id="pizza-size" required>
@@ -150,27 +159,27 @@
                             <label for="pizza-crust">Pizza crust: </label>
                             <select class="form-control form-control-sm" id="pizza-crust" required>
                                 <option value="">Crust: </option>
-                                <option value="1">Crispy</option>
-                                <option value="2">Stuffed</option>
-                                <option value="3">Glutten Free</option>
+                                <option>Crispy</option>
+                                <option>Stuffed</option>
+                                <option>Glutten Free</option>
                             </select>
                         </div>
                         <div id="topping-selection">
                             <h5>Choose a topping(s) of your liking:</h5>
                             <label for="pepperoni">Pepperoni
-                                <input type="checkbox" name="pepperoni" id="pepperoni" value="pepperoni">
+                                <input type="checkbox" name="topping" id="pepperoni" value="pepperoni">
                             </label>
                             <label for="ham-cheese">Ham and Cheese
-                                <input type="checkbox" name="ham-cheese" id="ham-cheese" value="ham-cheese">
+                                <input type="checkbox" name="topping" id="ham-cheese" value="ham-cheese">
                             </label>
                             <label for="shrimps">Shrimps
-                                <input type="checkbox" name="shrimps" id="shrimps" value="shrimps">
+                                <input type="checkbox" name="topping" id="shrimps" value="shrimps">
                             </label>
                             <label for="onions">Red Onions
-                                <input type="checkbox" name="onions" id="onions" value="onions">
+                                <input type="checkbox" name="topping" id="onions" value="onions">
                             </label>
                         </div>
-                        <button type="button" class="btn btn-primary" onclick="">Submit</button>
+                        <button type="submit" class="btn btn-primary" id="button">Submit</button>
                     </form>
                 </div>
 
