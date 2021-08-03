@@ -113,6 +113,19 @@ header {
 }
 
 /* Order/Form */
+
+.reservation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #DBF9F0;
+}
+.book{
+    flex: 1 200px;
+    text-align: center;
+}
+
 #book {
     background-color: #DBF9F0;
     padding: 5rem;
