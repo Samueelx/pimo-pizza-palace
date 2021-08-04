@@ -4,6 +4,27 @@ function Pizza(size, crust, toppings) {
     this.toppings = toppings;
 }
 
+Pizza.prototype.calculatePrice = function() {
+    let sizePrice = 600;    //size of the medium sized pizza
+    let toppingPrice;
+    const crustPrice = 350;
+    if(this.size === "large"){
+        sizePrice = 1.5 * sizePrice;
+    }
+    else if (this.size === "small") {
+        sizePrice = 0.75 * sizePrice;
+    }
+    
+    //calculating price of toppings
+    if (this.toppings.length === 1) {toppingPrice = 250;}
+    else if(this.toppings.length === 2) {toppingPrice *= 2;}
+    else if(this.toppings.length === 3) {toppingPrice *= 3;}
+    else {toppingPrice *= 4;}
+
+    //price of pizza
+    return sizePrice + crustPrice + toppingPrice;
+}
+
 
 
 $(document).ready( function() {
@@ -30,6 +51,7 @@ $(document).ready( function() {
 
         //create the pizza object
         let order = new Pizza(size, crust, topping);
+        alert(order.calculatePrice());
         
     });
 });
