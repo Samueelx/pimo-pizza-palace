@@ -6,7 +6,7 @@ function Pizza(size, crust, toppings) {
 
 Pizza.prototype.calculatePrice = function() {
     let sizePrice = 600;    //size of the medium sized pizza
-    let toppingPrice;
+    let toppingPrice = 250;
     const crustPrice = 350;
     if(this.size === "large"){
         sizePrice = 1.5 * sizePrice;
@@ -14,11 +14,12 @@ Pizza.prototype.calculatePrice = function() {
     else if (this.size === "small") {
         sizePrice = 0.75 * sizePrice;
     }
+    console.log("point2");
     
     //calculating price of toppings
-    if (this.toppings.length === 1) {toppingPrice = 250;}
-    else if(this.toppings.length === 2) {toppingPrice *= 2;}
-    else if(this.toppings.length === 3) {toppingPrice *= 3;}
+    if (this.toppings.length == 1) {toppingPrice = 250;}
+    else if(this.toppings.length == 2) {toppingPrice *= 2;}
+    else if(this.toppings.length == 3) {toppingPrice *= 3;}
     else {toppingPrice *= 4;}
 
     //price of pizza
@@ -42,15 +43,17 @@ $(document).ready( function() {
         let toppingList = $('input:checkbox[name = topping]:checked').map( function() {
             return this.value;
         });
-        //console.log(toppingList);
-        let topping = [];
+        console.log("point1");
+        let toppings = [];
         for( let i = 0; i < toppingList.length; i++){
-            topping.push(toppingList[i]);
+            toppings.push(toppingList[i]);
         }
+        console.log(toppings);
         //Now, topping is an array of the chosen toppings.
 
         //create the pizza object
-        let order = new Pizza(size, crust, topping);
+        let order = new Pizza(size, crust, toppings);
+        console.log(order.size, order.crust, order.toppings);
         alert(order.calculatePrice());
         
     });
